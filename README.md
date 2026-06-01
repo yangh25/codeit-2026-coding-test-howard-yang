@@ -8,6 +8,23 @@ A Spring Boot 3 application using Java 17 and Gradle.
 - MongoDB running locally on `localhost:27017`
 - Gradle is not required globally because the project includes the Gradle wrapper
 
+## MongoDB Setup
+
+### Using Docker
+
+To start a local MongoDB instance using Docker:
+
+```powershell
+docker run -d --name codeit-mongo -p 27017:27017 mongo:latest
+```
+
+This will start MongoDB in the background on port 27017. To stop it:
+
+```powershell
+docker stop codeit-mongo
+docker rm codeit-mongo
+```
+
 ## Local MongoDB configuration
 
 The application uses the following MongoDB settings in `src/main/resources/application.properties`:
