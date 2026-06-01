@@ -5,8 +5,8 @@ A Spring Boot 3 application using Java 17 and Gradle.
 ## Prerequisites
 
 - Java 17 SDK installed
-- Gradle installed or available via the system path
 - MongoDB running locally on `localhost:27017`
+- Gradle is not required globally because the project includes the Gradle wrapper
 
 ## Local MongoDB configuration
 
@@ -22,17 +22,17 @@ Make sure MongoDB is running before starting the application.
 
 ## Build and run
 
-From the project root:
+From the project root, use the Gradle wrapper on Windows:
 
 ```powershell
-gradle clean build
-gradle bootRun
+.\gradlew.bat clean build
+.\gradlew.bat bootRun
 ```
 
 If you prefer to run the app directly after build:
 
 ```powershell
-gradle bootJar
+.\gradlew.bat bootJar
 java -jar build\libs\codeit-2026-coding-test-howard-yang-0.0.1-SNAPSHOT.jar
 ```
 
